@@ -3,12 +3,39 @@
 
 <head>
     <meta charset=utf-8/>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>hw-04</title>
 </head>
 
 
 <body>
+<div class="headers">
+    <h1>hw-04: Event Handling</h1>
+</div>
 
+<div class="columns">
+    <div class="left">
+        <svg width="600" height="600">
+            <g id="scatterplot">
+
+                <line x1="50" y1="500" x2="550" y2="500" class="axis"/>
+                <line x1="50" y1="500" x2="50" y2="50" class="axis"/>
+
+                <circle cx="100" cy="450" r="8" id="point"/>
+                <circle cx="150" cy="350" r="8" id="point"/>
+                <circle cx="350" cy="450" r="8" id="point"/>
+                <circle cx="500" cy="100" r="8" id="point"/>
+
+                
+            </g>
+    </div>
+
+    <div class="right">
+        <h2>Right Column</h2>
+    </div>
 
 </body>
+
+<script src="main.js"></script>
 
 </html>
