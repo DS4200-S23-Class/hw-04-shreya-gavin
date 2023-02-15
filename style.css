@@ -28,4 +28,19 @@ body {
 	border: none;
 } 
 
+.point {
+	fill: blue;
+	stroke: none;
+  }
+  
+  .point:hover {
+	fill: red;
+	stroke: black;
+  }
+  
+  .point.selected {
+	stroke: black;
+	stroke-width: 2px;
+  }
+
 
