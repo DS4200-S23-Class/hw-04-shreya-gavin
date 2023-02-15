@@ -1,4 +1,112 @@
+
+
 <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <title>hw-04</title>
+</head>
+
+<body>
+  <div class="headers">
+    <h1 id="header">hw-04: Event Handling</h1>
+  </div>
+
+  <div class="columns">
+    <div class="left">
+      <svg width="600" height="600">
+        <g id="scatterplot">
+          <line x1="50" y1="500" x2="550" y2="500" class="axis" />
+          <line x1="50" y1="500" x2="50" y2="50" class="axis" />
+          <circle cx="100" cy="450" r="8" id="point" />
+          <circle cx="150" cy="350" r="8" id="point" />
+          <circle cx="350" cy="450" r="8" id="point" />
+          <circle cx="500" cy="100" r="8" id="point" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="right">
+      <h2>Right Column</h2>
+
+      <form>
+        <label for="x-coordinate">X-coordinate:</label>
+        <input type="number" id="x-coordinate" name="x-coordinate" min="1" max="9">
+        <br>
+        <label for="y-coordinate">Y-coordinate:</label>
+        <input type="number" id="y-coordinate" name="y-coordinate" min="1" max="9">
+        <br>
+        <input type="submit" value="Add Point">
+      </form>
+
+      <div id="coordinates"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!-- 
+version 1 -->
+<!-- <!DOCTYPE html>
+<html> 
+
+<head>
+    <meta charset=utf-8/>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>hw-04</title>
+</head>
+
+<body>
+    <div class="headers">
+        <h1 id="header">hw-04: Event Handling</h1>
+    </div>
+
+    <div class="columns">
+        <div class="left">
+            <svg width="600" height="600">
+                <g id="scatterplot">
+                    <line x1="50" y1="500" x2="550" y2="500" class="axis"/>
+                    <line x1="50" y1="500" x2="50" y2="50" class="axis"/>
+
+                    <circle cx="100" cy="450" r="8" id="point"/>
+                    <circle cx="150" cy="350" r="8" id="point"/>
+                    <circle cx="350" cy="450" r="8" id="point"/>
+                    <circle cx="500" cy="100" r="8" id="point"/>
+                </g>
+            </svg>
+        </div>
+
+        <div class="right">
+            <h2>Right Column</h2>
+
+            <div id="coordinates"></div>
+
+            <form id="add-point-form">
+                <label for="x-coordinate">X Coordinate:</label>
+                <input type="number" id="x-coordinate" name="x-coordinate" min="1" max="9" required>
+
+                <label for="y-coordinate">Y Coordinate:</label>
+                <input type="number" id="y-coordinate" name="y-coordinate" min="1" max="9" required>
+
+                <button type="submit">Add Point</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
 <html> 
 
 <head>
@@ -10,7 +118,7 @@
 
 <body>
 <div class="headers">
-    <h1>hw-04: Event Handling</h1>
+    <h1 id="header">hw-04: Event Handling</h1>
 </div>
 
 <div class="columns">
@@ -32,10 +140,13 @@
 
     <div class="right">
         <h2>Right Column</h2>
+
+        <div id="coordinates"></div>
+         
     </div>
 
 </body>
 
 <script src="main.js"></script>
 
-</html>
+</html> -->
