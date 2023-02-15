@@ -8,23 +8,25 @@ circles.forEach(circle => {
   });
 
   circle.addEventListener("mouseout", () => {
-    if (!circle.style.border) {
+    if (!circle.classList.contains("selected")) {
       circle.style.stroke = "none";
     }
   });
 
   circle.addEventListener("click", () => {
-    if (circle.style.border) {
-      circle.style.border = "";
+    if (circle.classList.contains("selected")) {
+      circle.classList.remove("selected");
       document.getElementById("coordinates").textContent = "";
     } else {
-      circles.forEach(circle => {
-        circle.style.border = "";
+      circle.classList.add("selected");
+      const selectedCircles = document.querySelectorAll(".selected");
+      selectedCircles.forEach(selectedCircle => {
+        selectedCircle.style.stroke = "black";
+        selectedCircle.style.strokeWidth = "2px";
       });
-      circle.style.border = "2px solid black";
       const x = circle.getAttribute("cx");
       const y = circle.getAttribute("cy");
-      document.getElementById("coordinates").textContent = `(${x}, ${y})`;
+      document.getElementById("coordinates").textContent += `(${x / 60 | 0}, ${10 - y / 60 | 0}) `;
     }
   });
 });
@@ -43,7 +45,7 @@ form.addEventListener("submit", event => {
     newCircle.setAttribute("cx", x * 60);
     newCircle.setAttribute("cy", (10 - y) * 60);
     newCircle.setAttribute("r", "8");
-    newCircle.setAttribute("id", "point");
+    newCircle.setAttribute("class", "point");
     scatterplot.appendChild(newCircle);
 
     newCircle.addEventListener("mouseover", () => {
@@ -52,23 +54,25 @@ form.addEventListener("submit", event => {
     });
 
     newCircle.addEventListener("mouseout", () => {
-      if (!newCircle.style.border) {
+      if (!newCircle.classList.contains("selected")) {
         newCircle.style.stroke = "none";
       }
     });
 
     newCircle.addEventListener("click", () => {
-      if (newCircle.style.border) {
-        newCircle.style.border = "";
+      if (newCircle.classList.contains("selected")) {
+        newCircle.classList.remove("selected");
         document.getElementById("coordinates").textContent = "";
       } else {
-        circles.forEach(circle => {
-          circle.style.border = "";
+        newCircle.classList.add("selected");
+        const selectedCircles = document.querySelectorAll(".selected");
+        selectedCircles.forEach(selectedCircle => {
+          selectedCircle.style.stroke = "black";
+          selectedCircle.style.strokeWidth = "2px";
         });
-        newCircle.style.border = "2px solid black";
         const x = newCircle.getAttribute("cx");
         const y = newCircle.getAttribute("cy");
-        document.getElementById("coordinates").textContent = `(${x / 60}, ${10 - y / 60})`;
+        document.getElementById("coordinates").textContent += `(${x / 60 | 0}, ${10 - y / 60 | 0}) `;
       }
     });
   }

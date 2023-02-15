@@ -1,34 +1,29 @@
 body {
 	font-family: Arial;
-}
-
-.headers {
+  }
+  
+  .headers {
 	text-align: center;
-}
-
-.columns {
+  }
+  
+  .columns {
 	display: flex;
-}
-
-.left {
+  }
+  
+  .left {
 	width: 60%;
-}
-
-.right {
+  }
+  
+  .right {
 	width: 40%;
-}
-
-.axis {
+  }
+  
+  .axis {
 	stroke: black;
 	stroke-width: 2px;
-}
-
-#point {
-	fill: blue;
-	border: none;
-} 
-
-.point {
+  }
+  
+  .point {
 	fill: blue;
 	stroke: none;
   }
@@ -42,5 +37,22 @@ body {
 	stroke: black;
 	stroke-width: 2px;
   }
-
-
+  
+  #acknowledgements {
+	margin: 50px auto;
+	text-align: center;
+  }
+  
+  #acknowledgements h2 {
+	font-size: 24px;
+  }
+  
+  #acknowledgements ul {
+	list-style: disc;
+	text-align: left;
+	margin-left: 50px;
+  }
+  
+  #acknowledgements li {
+	margin-bottom: 10px;
+  }
